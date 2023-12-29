@@ -161,7 +161,7 @@ GainExperience:
 	jr nz, .skipExpText ; if there's EXP. all, skip showing any text
 	ld hl, GainedText ;there's no EXP. all, load the text to show
 	rst _PrintText
-	+.skipExpText
+	.skipExpText
 	xor a ; PLAYER_PARTY_DATA
 	ld [wMonDataLocation], a
 ;;;;;;;;;; PureRGBnote: ADDED: EXP bar is optional and will only render if the option is enabled.
